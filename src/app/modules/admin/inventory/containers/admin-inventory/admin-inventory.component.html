@@ -1,0 +1,13 @@
+<div
+  class="mat-typography"
+  fxLayout="row"
+  fxLayoutAlign="space-between flex-start "
+>
+  <h2>All Inventory</h2>
+  <button mat-raised-button color="primary" (click)="openAddInventoryModal()">
+    Add New Inventory
+  </button>
+</div>
+<mat-card>
+  <app-inventory-table [tableData]="tableData$ | async"></app-inventory-table>
+</mat-card>

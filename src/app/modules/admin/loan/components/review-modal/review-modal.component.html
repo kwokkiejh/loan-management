@@ -1,0 +1,88 @@
+<div class="root">
+  <mat-progress-bar mode="indeterminate" *ngIf="loading"></mat-progress-bar>
+
+  <button mat-icon-button class="close" [mat-dialog-close]>
+    <mat-icon>clear</mat-icon>
+  </button>
+  <ng-container *ngIf="!success">
+    <ng-container *ngIf="data.type === 'approve'">
+      <mat-icon
+        color="primary"
+        aria-hidden="false"
+        aria-label="success"
+        class="header-icon"
+        >check_circle</mat-icon
+      >
+      <div>
+        <h1 mat-dialog-title>Approve Request</h1>
+      </div>
+      <div mat-dialog-content>
+        <div style="margin-bottom: 20px">
+          <p class="mat-typography">
+            Please confirm that you are approving this request.
+          </p>
+        </div>
+        <button
+          mat-flat-button
+          color="primary"
+          (click)="onApproveClick()"
+          [disabled]="loading"
+        >
+          Approve
+        </button>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="data.type === 'cancel'">
+      <mat-icon
+        color="warn"
+        aria-hidden="false"
+        aria-label="cancel"
+        class="header-icon"
+        >cancel</mat-icon
+      >
+      <div>
+        <h1 mat-dialog-title>Cancel Request</h1>
+      </div>
+      <div mat-dialog-content>
+        <div style="margin-bottom: 20px">
+          <p class="mat-typography">
+            Are you sure you want to cancel this request? <br />This cannot be
+            undone.
+          </p>
+        </div>
+        <button
+          mat-flat-button
+          color="warn"
+          (click)="onCancelClick()"
+          [disabled]="loading"
+        >
+          Cancel
+        </button>
+      </div>
+    </ng-container>
+  </ng-container>
+
+  <ng-container *ngIf="success">
+    <mat-icon
+      color="primary"
+      aria-hidden="false"
+      aria-label="success"
+      class="header-icon"
+      >done</mat-icon
+    >
+    <div>
+      <h1 mat-dialog-title>Success</h1>
+    </div>
+    <div mat-dialog-content>
+      <div style="margin-bottom: 20px">
+        <p *ngIf="data.type === 'approve'" class="mat-typography">
+          The request has been approved successfully.
+        </p>
+        <p *ngIf="data.type === 'cancel'" class="mat-typography">
+          The request has been cancelled successfully.
+        </p>
+      </div>
+      <button mat-stroked-button [mat-dialog-close]>Close</button>
+    </div>
+  </ng-container>
+</div>

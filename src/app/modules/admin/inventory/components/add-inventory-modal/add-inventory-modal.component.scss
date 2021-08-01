@@ -1,0 +1,52 @@
+.header-icon {
+  font-size: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.container {
+  min-width: 280px;
+}
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.mat-dialog-content {
+  text-align: center;
+}
+.mat-flat-button {
+  width: 100%;
+}
+::ng-deep .mat-form-field-underline {
+  display: none;
+}
+
+.mat-form-field {
+  width: 100%;
+}
+.mat-stroked-button {
+  width: 150px;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+::ng-deep.mat-dialog-container {
+  position: relative;
+}
+
+.mat-progress-bar {
+  position: absolute;
+  top: 0;
+}
+
+.form-label {
+  text-align: left;
+}

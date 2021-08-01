@@ -1,0 +1,23 @@
+<mat-toolbar>
+  <div fxLayout="row" fxLayoutAlign="center center" class="root">
+    <div fxFlex>
+      <span>Loan Management</span>
+    </div>
+    <div fxFlex class="flex-tab-group">
+      <mat-tab-group
+        mat-align-tabs="center"
+        mat-stretch-tabs
+        [selectedIndex]="currentTabIndex"
+        (selectedTabChange)="onTabChange($event)"
+      >
+        <mat-tab label="Loan"></mat-tab>
+        <mat-tab label="Inventory"></mat-tab>
+      </mat-tab-group>
+    </div>
+    <div fxFlex fxLayoutAlign="end">
+      <button mat-icon-button>
+        <mat-icon> account_circle </mat-icon>
+      </button>
+    </div>
+  </div>
+</mat-toolbar>
