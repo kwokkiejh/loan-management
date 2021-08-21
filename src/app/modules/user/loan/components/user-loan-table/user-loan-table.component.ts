@@ -5,25 +5,18 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 
 import { Loan } from '../../../../common/models/loan';
-import { ReviewModalComponent } from '../review-modal/review-modal.component';
 
 @Component({
-  selector: 'loan-table-component',
-  templateUrl: './loan-table.component.html',
-  styleUrls: ['./loan-table.component.scss'],
+  selector: 'user-loan-table-component',
+  templateUrl: './user-loan-table.component.html',
+  styleUrls: ['./user-loan-table.component.scss'],
 })
-export class LoanTableComponent implements OnInit {
+export class UserLoanTableComponent implements OnInit {
   @Input() tableData: Loan[];
   @ViewChild(MatPaginator) paginator: MatPaginator;
   dataSource: MatTableDataSource<Loan>;
 
-  displayedColumns: string[] = [
-    'item',
-    'quantity',
-    'user',
-    'status',
-    'actions',
-  ];
+  displayedColumns: string[] = ['item', 'quantity', 'status', 'actions'];
   constructor(public dialog: MatDialog) {}
 
   ngOnInit() {
@@ -32,15 +25,5 @@ export class LoanTableComponent implements OnInit {
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
-  }
-
-  openReviewModal(id: number, type: string) {
-    this.dialog.open(ReviewModalComponent, {
-      autoFocus: false,
-      data: {
-        type: type,
-        selectedId: id,
-      },
-    });
   }
 }

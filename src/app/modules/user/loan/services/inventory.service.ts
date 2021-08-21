@@ -14,7 +14,6 @@ export class InventoryService {
         item: 'Laptop',
         totalQuantity: 30,
         availableQuantity: 15,
-
         onLoanQuantity: 15,
       },
       {
@@ -22,12 +21,39 @@ export class InventoryService {
         item: 'iPad',
         totalQuantity: 10,
         availableQuantity: 5,
-
         onLoanQuantity: 5,
       },
       {
         id: 1,
         item: 'iPhone',
+        totalQuantity: 20,
+        availableQuantity: 15,
+        onLoanQuantity: 5,
+      },
+      {
+        id: 1,
+        item: 'Camera',
+        totalQuantity: 15,
+        availableQuantity: 10,
+        onLoanQuantity: 5,
+      },
+      {
+        id: 1,
+        item: 'Mouse',
+        totalQuantity: 20,
+        availableQuantity: 15,
+        onLoanQuantity: 5,
+      },
+      {
+        id: 1,
+        item: 'Dell Monitor',
+        totalQuantity: 40,
+        availableQuantity: 23,
+        onLoanQuantity: 17,
+      },
+      {
+        id: 1,
+        item: 'Headset',
         totalQuantity: 20,
         availableQuantity: 15,
         onLoanQuantity: 5,

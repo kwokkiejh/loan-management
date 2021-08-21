@@ -1,0 +1,29 @@
+<div class="mat-typography">
+  <h2>New Loan Request</h2>
+</div>
+<mat-horizontal-stepper #stepper [linear]="true" labelPosition="bottom">
+  <mat-step label="Submit Request">
+    <div style="padding: 24px">
+      <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input
+          matInput
+          placeholder="Last name, First name"
+          formControlName="firstCtrl"
+          required
+        />
+      </mat-form-field>
+    </div>
+  </mat-step>
+  <mat-step label="Acknowledgement">
+    <mat-form-field appearance="fill" label="Fill out your address">
+      <mat-label>Name</mat-label>
+      <input
+        matInput
+        placeholder="Last name, First name"
+        formControlName="firstCtrl"
+        required
+      />
+    </mat-form-field>
+  </mat-step>
+</mat-horizontal-stepper>

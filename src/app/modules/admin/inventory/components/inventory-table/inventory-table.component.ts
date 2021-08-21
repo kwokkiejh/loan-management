@@ -3,7 +3,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-import { Inventory } from '../../models/inventory';
+import { Inventory } from '../../../../common/models/inventory';
 
 @Component({
   selector: 'app-inventory-table',

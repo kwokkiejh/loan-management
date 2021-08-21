@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Loan } from '../../models/loan';
+import { Loan } from '../../../../common/models/loan';
 import { LoanService } from '../../services/loan.service';
 
 @Component({
