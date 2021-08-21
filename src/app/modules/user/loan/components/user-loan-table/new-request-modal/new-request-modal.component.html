@@ -7,20 +7,35 @@
   <ng-container *ngIf="!success">
     <ng-container>
       <div>
-        <h6 mat-dialog-title>Add New Inventory</h6>
+        <h6 mat-dialog-title>New Loan Request</h6>
       </div>
       <div mat-dialog-content class="container">
         <div style="margin-bottom: 20px">
           <div class="mat-typography form-label">Item</div>
           <div>
-            <mat-form-field appearance="outline">
-              <textarea
-                matInput
-                matTextareaAutosize
-                matAutosizeMinRows="2"
-                matAutosizeMaxRows="5"
-              ></textarea>
-            </mat-form-field>
+            <form>
+              <mat-form-field appearance="outline">
+                <input
+                  type="text"
+                  matInput
+                  [formControl]="itemControl"
+                  [matAutocomplete]="auto"
+                />
+                <mat-icon matSuffix>search</mat-icon>
+                <mat-autocomplete
+                  autoActiveFirstOption
+                  #auto="matAutocomplete"
+                  [displayWith]="displayFn"
+                >
+                  <mat-option
+                    *ngFor="let option of filteredOptions | async"
+                    [value]="option"
+                  >
+                    {{ option.item }}
+                  </mat-option>
+                </mat-autocomplete>
+              </mat-form-field>
+            </form>
           </div>
           <div class="mat-typography form-label">Quantity</div>
           <div>
@@ -29,6 +44,7 @@
             </mat-form-field>
           </div>
         </div>
+
         <button
           mat-flat-button
           color="primary"
@@ -50,7 +66,7 @@
       >done</mat-icon
     >
     <div>
-      <h6 mat-dialog-title>Success</h6>
+      <h1 mat-dialog-title>Success</h1>
     </div>
     <div mat-dialog-content>
       <div style="margin-bottom: 20px">

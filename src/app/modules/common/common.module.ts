@@ -10,13 +10,14 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDialogModule } from '@angular/material/dialog';
 import { RouterModule } from '@angular/router';
-import { AppbarComponent } from './appbar/appbar.component';
+import { AppbarComponent } from './appbar-admin/appbar.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { AppbarUserComponent } from './appbar-user/appbar-user.component';
 
 @NgModule({
-  declarations: [AppbarComponent],
+  declarations: [AppbarComponent, AppbarUserComponent],
   imports: [
     FlexLayoutModule,
     MatCardModule,
@@ -33,6 +34,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatGridListModule,
     RouterModule,
   ],
-  exports: [AppbarComponent],
+  exports: [AppbarComponent, AppbarUserComponent],
 })
 export class CommonComponentsModule {}

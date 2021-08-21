@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 
-import { Loan } from '../models/loan';
+import { Loan } from '../../../common/models/loan';
 
 @Injectable({
   providedIn: 'root',
