@@ -1,6 +1,26 @@
-# AngularEssentials
+# Loan Management Prototype
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.6.
+
+**User Module**
+
+routes: `http://localhost:4200/user/loan`
+
+
+
+https://user-images.githubusercontent.com/71374506/130314963-c828edd0-c94a-4a77-8164-e810f54da8c1.mov
+
+
+
+**Admin Module**
+
+routes: `http://localhost:4200/admin/loan`  `http://localhost:4200/admin/inventory`
+
+
+
+https://user-images.githubusercontent.com/71374506/130314976-c9d6a52f-82d4-4d32-bc0a-255c53f4a955.mov
+
+
 
 ## Development server
 
