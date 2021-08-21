@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { startWith } from 'rxjs/operators';
 import { Inventory } from 'src/app/modules/common/models/inventory';
 import { map } from 'rxjs/operators';
-import { InventoryService } from '../../../services/inventory.service';
+import { InventoryService } from '../../services/inventory.service';
 
 @Component({
   selector: 'new-request-modal-component',

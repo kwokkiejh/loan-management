@@ -16,6 +16,7 @@ export class LoanTableComponent implements OnInit {
   @Input() tableData: Loan[];
   @ViewChild(MatPaginator) paginator: MatPaginator;
   dataSource: MatTableDataSource<Loan>;
+  selectedRow: Element;
 
   displayedColumns: string[] = [
     'item',
@@ -32,6 +33,10 @@ export class LoanTableComponent implements OnInit {
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
+  }
+
+  resetSelectedRow() {
+    this.selectedRow = null;
   }
 
   openReviewModal(id: number, type: string) {

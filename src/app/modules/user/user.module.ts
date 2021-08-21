@@ -22,10 +22,11 @@ import { UserLoanComponent } from './loan/containers/user-loan/user-loan.compone
 import { UserLoanTableComponent } from './loan/components/user-loan-table/user-loan-table.component';
 import { NewLoanRequestComponent } from './new-loan/containers/new-loan-request/new-loan-request.component';
 import { MatStepperModule } from '@angular/material/stepper';
-import { NewRequestModalComponent } from './loan/components/user-loan-table/new-request-modal/new-request-modal.component';
+import { NewRequestModalComponent } from './loan/components/new-request-modal/new-request-modal.component';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { InventoryService } from './loan/services/inventory.service';
 import { ReactiveFormsModule } from '@angular/forms';
+import { UserReviewModalComponent } from './loan/components/user-review-modal/user-review-modal.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     UserLoanTableComponent,
     NewLoanRequestComponent,
     NewRequestModalComponent,
+    UserReviewModalComponent,
   ],
   imports: [
     ReactiveFormsModule,
